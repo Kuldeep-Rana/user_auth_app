@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-client = MongoClient('localhost', 27017)  # MongoDB is running locally
+client = MongoClient('192.168.1.22', 27017)  # MongoDB is running locally
 db = client['user_db']
 users_collection = db['users']
 
