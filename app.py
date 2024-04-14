@@ -14,7 +14,7 @@ def register():
     password = data.get('password')
 
     if not username or not password:
-        return jsonify({'error': 'Username and password are required'}), 400
+        return jsonify({'error': 'Username and password are  required'}), 400
 
     existing_user = users_collection.find_one({'username': username})
     if existing_user:
